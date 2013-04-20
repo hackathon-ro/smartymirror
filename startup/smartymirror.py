@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import wx
 import wx.lib.buttons as buttons
 import os
@@ -5,8 +7,10 @@ import os
 class MyForm(wx.Frame):
  
     def __init__(self):
-        wx.Frame.__init__(self, None, wx.ID_ANY, "Smarty Mirror")
+        wx.Frame.__init__(self, None, wx.ID_ANY, "Mirror Apps", size=(200,200))
         panel = wx.Panel(self, wx.ID_ANY)
+        panel.SetBackgroundColour("black")
+	panel.Refresh()
  
         # create a normal toggle button
         button_horoscop = wx.Button(panel, label="Horoscop")
@@ -35,16 +39,13 @@ class MyForm(wx.Frame):
 	revalue = os.system("python /home/pi/smartmirror/apps/horoscope/horoscope.py &")	
 
     def onVremea(self,eventq):
-        print "Button vremea"
 	revalue = os.system("python /home/pi/smartmirror/apps/weather/weather.py &")
 
     def onClock(self,eventq):
-        print "Button clock"
         revalue = os.system("python /home/pi/smartmirror/apps/clock/clock.py &")
 
     def onQuote(self,eventq):
-        print "Button quote"
-
+	revalue = os.system("/home/pi/smartmirror/apps/quote/quote.sh")
 
 
     #----------------------------------------------------------------------
