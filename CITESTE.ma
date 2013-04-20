@@ -16,3 +16,6 @@ Utilitate
 
 - Comercial
    - Se adreseaza spatiilor comerciale, unde aceasta oglinda afiseaza continut audio/video personalizat.
+
+Start
+ - Se copiaza StartApps.desktop in /home/pi/Desktop/

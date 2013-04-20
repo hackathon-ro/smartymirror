@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Smarty Apps
+Comment=Smarty Mirror Apps
+Exec=/usr/bin/python /home/pi/smartmirror/startup/smartymirror.py
+Terminal=false
+Icon=/home/pi/gameicon.png
+Categories=X-Debian-Applications
