@@ -1,6 +1,8 @@
 import time
 import wx
 import wx.gizmos as gizmos
+import os
+
 class LED_clock(wx.Frame):
     def __init__(self, parent, id):
         pos = wx.DefaultPosition
@@ -29,4 +31,5 @@ if __name__ == '__main__':
     frame = LED_clock(None, -1)
     frame.Show(True)
     app.SetTopWindow(frame)
+    retvalue = os.system("/home/pi/smartmirror/speech/speech.sh Smarty Clock")
     app.MainLoop()
